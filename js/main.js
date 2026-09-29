@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </p>
 
                 <img
-                    src="../imagens/voluntariado.jpeg"
+                    src="imagens/voluntariado.jpeg"
                     alt="Voluntários participando de uma ação social">
             </section>
 
