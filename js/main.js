@@ -4,6 +4,8 @@ import { validarFormulario } from "./validacao.js";
 document.addEventListener("DOMContentLoaded", () => {
 
     const conteudoPrincipal = document.querySelector("main");
+    const dentroDaPastaHTML = window.location.pathname.includes("/html/");
+    const caminhoImagens = dentroDaPastaHTML ? "../imagens/" : "imagens/";
 
     // =====================================================
     // DADOS DOS PROJETOS SOCIAIS
@@ -14,14 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
             titulo: "Voluntariado",
             descricao:
                 "Participe de campanhas solidárias, eventos comunitários e ações de arrecadação.",
-            imagem: "imagens/voluntariado.jpeg",
+            imagem: caminhoImagens + "voluntariado.webp",
             alt: "Voluntários participando de uma ação social"
         },
         {
             titulo: "Campanhas de Doação",
             descricao:
                 "Ajude nossos projetos com doações de alimentos, roupas e outras contribuições.",
-            imagem: "imagens/doacoes.jpeg",
+            imagem: caminhoImagens + "doacoes.webp",
             alt: "Doações destinadas aos projetos sociais da ONG"
         }
     ];
@@ -62,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </p>
 
                 <img
-                    src="imagens/voluntariado.jpeg"
+                    src="${caminhoImagens}voluntariado.webp"
                     alt="Voluntários participando de uma ação social">
             </section>
 
